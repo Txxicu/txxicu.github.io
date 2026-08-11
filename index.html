@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Txxicu</title>
+  <meta name="theme-color" content="#BB9BFF">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Cascadia+Code:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #181818;
+      color: white;
+      min-height: 100vh;
+    }
+    .code-font { font-family: 'Cascadia Code', monospace; }
+    .card {
+      background: rgba(54, 54, 54, 0.15);
+      backdrop-filter: blur(8px);
+      border-radius: 1rem;
+      transition: all 0.2s ease;
+    }
+    .card:hover {
+      transform: scale(1.01);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    .link-item:hover { background: rgba(255,255,255,0.08); }
+    .tool-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.05);
+      font-size: 11px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.2;
+      padding: 4px;
+    }
+  </style>
+</head>
+<body class="flex flex-col items-center py-8 px-4 lg:py-12">
+
+  <div class="w-full max-w-5xl flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+
+    <!-- Avatar -->
+    <div class="flex-shrink-0 mx-auto lg:mx-0">
+      <div class="relative rounded-full overflow-hidden w-64 h-64 lg:w-80 lg:h-80 border-4 border-[#BB9BFF]/30">
+        <img src="https://github.com/Txxicu.png" alt="Avatar" class="w-full h-full object-cover">
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="flex-1 space-y-6">
+      <div>
+        <h1 class="text-4xl lg:text-5xl font-bold tracking-tight">Txxicu</h1>
+        <div class="text-gray-400 text-sm mt-1 space-y-0.5">
+          <div>🍰 05.03</div>
+          <div>🕓 МСК</div>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h2 class="text-lg font-semibold mb-3 text-gray-300">Мои ссылки</h2>
+        <div class="rounded-xl overflow-hidden bg-[#2a2a2a]/60">
+          <a href="https://github.com/Txxicu" target="_blank" class="link-item flex items-center gap-3 px-4 py-3 transition-colors">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-6 h-6 invert" alt="GitHub">
+            <span>GitHub</span>
+          </a>
+          <a href="https://steamcommunity.com/id/Txxicu" target="_blank" class="link-item flex items-center gap-3 px-4 py-3 transition-colors">
+            <img src="https://cdn.simpleicons.org/steam/ffffff" class="w-6 h-6" alt="Steam">
+            <span>Steam</span>
+          </a>
+          <a href="https://modrinth.com/user/txxicu" target="_blank" class="link-item flex items-center gap-3 px-4 py-3 transition-colors">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/modrinth.svg" class="w-6 h-6" style="filter: invert(1);" alt="Modrinth">
+            <span>Modrinth</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div>
+        <h2 class="text-lg font-semibold mb-2 text-gray-300">Инструменты, языки и ПО</h2>
+        <p class="text-sm text-gray-500 mb-3">(Наведение на иконку показывает описание)</p>
+        <div class="flex flex-wrap gap-3">
+          <div class="tool-icon" title="Python">Python</div>
+          <div class="tool-icon" title="Java">Java</div>
+          <div class="tool-icon" title="Kotlin">Kotlin</div>
+          <div class="tool-icon" title="HTML">HTML</div>
+          <div class="tool-icon" title="PHP">PHP</div>
+          <div class="tool-icon" title="CSS">CSS</div>
+          <div class="tool-icon" title="Android Studio">Android Studio</div>
+          <div class="tool-icon" title="Godot">Godot</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Projects -->
+  <div class="w-full max-w-5xl mt-12">
+    <h2 class="text-2xl font-bold mb-6">Мои проекты</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <div class="card p-4 flex flex-col gap-3">
+        <div class="flex gap-3 items-start">
+          <div class="w-14 h-14 rounded-xl bg-[#BB9BFF]/20 flex items-center justify-center text-2xl">🚀</div>
+          <div>
+            <h3 class="font-semibold text-lg">LoLauncher</h3>
+          </div>
+        </div>
+        <a href="https://github.com/Txxicu/LoLauncher/releases" target="_blank" class="flex items-center gap-2 text-sm text-gray-300 hover:text-white mt-auto">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-4 h-4 invert">
+          Releases
+        </a>
+      </div>
+
+      <div class="card p-4 flex flex-col gap-3">
+        <div class="flex gap-3 items-start">
+          <div class="w-14 h-14 rounded-xl bg-[#BB9BFF]/20 flex items-center justify-center text-2xl">🖱️</div>
+          <div>
+            <h3 class="font-semibold text-lg">NeAutoClickMe</h3>
+          </div>
+        </div>
+        <a href="https://github.com/Txxicu/NeAutoClickMe/releases" target="_blank" class="flex items-center gap-2 text-sm text-gray-300 hover:text-white mt-auto">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-4 h-4 invert">
+          Releases
+        </a>
+      </div>
+
+      <div class="card p-4 flex flex-col gap-3">
+        <div class="flex gap-3 items-start">
+          <div class="w-14 h-14 rounded-xl bg-[#BB9BFF]/20 flex items-center justify-center text-2xl">🛡️</div>
+          <div>
+            <h3 class="font-semibold text-lg">Blocking-Yandex</h3>
+          </div>
+        </div>
+        <a href="https://github.com/Txxicu/Blocking-Yandex/releases" target="_blank" class="flex items-center gap-2 text-sm text-gray-300 hover:text-white mt-auto">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-4 h-4 invert">
+          Releases
+        </a>
+      </div>
+
+    </div>
+    <p class="text-gray-500 text-sm mt-6">Когда нибудь будут еще..</p>
+  </div>
+
+</body>
+</html>
