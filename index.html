@@ -41,14 +41,12 @@
     }
 
     /* Custom tooltip */
-    .name-wrapper {
+    .notes-wrapper {
       position: relative;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
     }
     .notes-btn {
-      position: relative;
       font-size: 20px;
       color: #d1d5db;
       padding: 2px;
@@ -71,16 +69,16 @@
       border: 1px solid #3f3f3f;
       border-radius: 10px;
       padding: 10px 14px;
-      min-width: 160px;
+      min-width: 150px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.4);
       opacity: 0;
       visibility: hidden;
       transition: all 0.2s ease;
       z-index: 50;
       pointer-events: none;
-      white-space: nowrap;
+      font-family: 'Montserrat', sans-serif; /* важно! */
     }
-    .notes-btn:hover .custom-tooltip {
+    .notes-wrapper:hover .custom-tooltip {
       opacity: 1;
       visibility: visible;
       transform: translateX(-50%) translateY(0);
@@ -99,9 +97,10 @@
       transform: rotate(45deg);
     }
     .nick-item {
-      padding: 4px 0;
+      padding: 5px 0;
       font-size: 14px;
       color: #e5e7eb;
+      white-space: nowrap;
     }
     .nick-item:not(:last-child) {
       border-bottom: 1px solid #3a3a3a;
@@ -124,19 +123,21 @@
     <!-- Info -->
     <div class="flex-1 space-y-6">
       <div>
-        <div class="name-wrapper">
+        <div class="flex items-center gap-2">
           <h1 class="text-4xl lg:text-5xl font-bold tracking-tight">Txxicu</h1>
           
-          <span class="material-icons notes-btn">
-            notes
-            <!-- Custom tooltip теперь внутри notes-btn -->
+          <div class="notes-wrapper">
+            <span class="material-icons notes-btn">notes</span>
+            
+            <!-- Тултип вынесен наружу из material-icons -->
             <div class="custom-tooltip">
               <div class="nick-item">TxxicuExE</div>
               <div class="nick-item">Тиксу</div>
               <div class="nick-item">Тиксусич</div>
+              <div class="nick-item">Джеф убица</div>
               <div class="nick-item">Wasted</div>
             </div>
-          </span>
+          </div>
         </div>
         
         <div class="text-gray-400 text-sm mt-1 space-y-0.5">
@@ -204,6 +205,7 @@
                class="w-14 h-14 rounded-xl object-cover" alt="LoLauncher">
           <div>
             <h3 class="font-semibold text-lg">LoLauncher</h3>
+            <p class="text-sm text-gray-400 mt-1">Удобный и лёгкий Minecraft лаунчер</p>
           </div>
         </div>
         <a href="https://github.com/Txxicu/LoLauncher/releases" target="_blank"
