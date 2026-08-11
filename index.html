@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Txxicu</title>
   <meta name="theme-color" content="#BB9BFF">
+  
+  <!-- Favicon = аватарка с GitHub -->
+  <link rel="icon" type="image/png" href="https://github.com/Txxicu.png">
+  <link rel="apple-touch-icon" href="https://github.com/Txxicu.png">
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Cascadia+Code:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -14,7 +19,6 @@
       color: white;
       min-height: 100vh;
     }
-    .code-font { font-family: 'Cascadia Code', monospace; }
     .card {
       background: rgba(54, 54, 54, 0.15);
       backdrop-filter: blur(8px);
@@ -27,18 +31,12 @@
     }
     .link-item:hover { background: rgba(255,255,255,0.08); }
     .tool-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255,255,255,0.05);
-      font-size: 11px;
-      font-weight: 600;
-      text-align: center;
-      line-height: 1.2;
-      padding: 4px;
+      width: 56px;
+      height: 56px;
+      transition: transform 0.2s;
+    }
+    .tool-icon:hover {
+      transform: scale(1.1);
     }
   </style>
 </head>
@@ -84,17 +82,24 @@
 
       <!-- Tools -->
       <div>
-        <h2 class="text-lg font-semibold mb-2 text-gray-300">Инструменты, языки и ПО</h2>
-        <p class="text-sm text-gray-500 mb-3">(Наведение на иконку показывает описание)</p>
+        <h2 class="text-lg font-semibold mb-3 text-gray-300">Инструменты, языки и ПО</h2>
         <div class="flex flex-wrap gap-3">
-          <div class="tool-icon" title="Python">Python</div>
-          <div class="tool-icon" title="Java">Java</div>
-          <div class="tool-icon" title="Kotlin">Kotlin</div>
-          <div class="tool-icon" title="HTML">HTML</div>
-          <div class="tool-icon" title="PHP">PHP</div>
-          <div class="tool-icon" title="CSS">CSS</div>
-          <div class="tool-icon" title="Android Studio">Android Studio</div>
-          <div class="tool-icon" title="Godot">Godot</div>
+          <!-- Python -->
+          <img class="tool-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" title="Python" alt="Python">
+          <!-- Java -->
+          <img class="tool-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" title="Java" alt="Java">
+          <!-- Kotlin -->
+          <img class="tool-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" title="Kotlin" alt="Kotlin">
+          <!-- HTML -->
+          <img class="tool-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" title="HTML" alt="HTML">
+          <!-- PHP -->
+          <img class="tool-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" title="PHP" alt="PHP">
+          <!-- CSS -->
+          <img class="tool-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" title="CSS" alt="CSS">
+          <!-- Android Studio -->
+          <img class="tool-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" title="Android Studio" alt="Android Studio">
+          <!-- Godot -->
+          <img class="tool-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" title="Godot" alt="Godot">
         </div>
       </div>
     </div>
@@ -105,42 +110,53 @@
     <h2 class="text-2xl font-bold mb-6">Мои проекты</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
+      <!-- LoLauncher -->
       <div class="card p-4 flex flex-col gap-3">
         <div class="flex gap-3 items-start">
-          <div class="w-14 h-14 rounded-xl bg-[#BB9BFF]/20 flex items-center justify-center text-2xl">🚀</div>
+          <img src="https://raw.githubusercontent.com/Txxicu/LoLauncher/refs/heads/main/images/logo.png" 
+               class="w-14 h-14 rounded-xl object-cover" alt="LoLauncher">
           <div>
             <h3 class="font-semibold text-lg">LoLauncher</h3>
           </div>
         </div>
-        <a href="https://github.com/Txxicu/LoLauncher/releases" target="_blank" class="flex items-center gap-2 text-sm text-gray-300 hover:text-white mt-auto">
+        <a href="https://github.com/Txxicu/LoLauncher/releases" target="_blank" 
+           class="flex items-center gap-2 text-sm text-gray-300 hover:text-white mt-auto">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-4 h-4 invert">
-          Releases
+          GitHub
         </a>
       </div>
 
+      <!-- NeAutoClickMe -->
       <div class="card p-4 flex flex-col gap-3">
         <div class="flex gap-3 items-start">
-          <div class="w-14 h-14 rounded-xl bg-[#BB9BFF]/20 flex items-center justify-center text-2xl">🖱️</div>
+          <div class="w-14 h-14 rounded-xl bg-[#BB9BFF]/20 flex items-center justify-center text-2xl font-bold text-[#BB9BFF]">
+            N
+          </div>
           <div>
             <h3 class="font-semibold text-lg">NeAutoClickMe</h3>
           </div>
         </div>
-        <a href="https://github.com/Txxicu/NeAutoClickMe/releases" target="_blank" class="flex items-center gap-2 text-sm text-gray-300 hover:text-white mt-auto">
+        <a href="https://github.com/Txxicu/NeAutoClickMe/releases" target="_blank" 
+           class="flex items-center gap-2 text-sm text-gray-300 hover:text-white mt-auto">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-4 h-4 invert">
-          Releases
+          GitHub
         </a>
       </div>
 
+      <!-- Blocking-Yandex -->
       <div class="card p-4 flex flex-col gap-3">
         <div class="flex gap-3 items-start">
-          <div class="w-14 h-14 rounded-xl bg-[#BB9BFF]/20 flex items-center justify-center text-2xl">🛡️</div>
+          <div class="w-14 h-14 rounded-xl bg-[#BB9BFF]/20 flex items-center justify-center text-2xl">
+            🛡️
+          </div>
           <div>
             <h3 class="font-semibold text-lg">Blocking-Yandex</h3>
           </div>
         </div>
-        <a href="https://github.com/Txxicu/Blocking-Yandex/releases" target="_blank" class="flex items-center gap-2 text-sm text-gray-300 hover:text-white mt-auto">
+        <a href="https://github.com/Txxicu/Blocking-Yandex/releases" target="_blank" 
+           class="flex items-center gap-2 text-sm text-gray-300 hover:text-white mt-auto">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-4 h-4 invert">
-          Releases
+          GitHub
         </a>
       </div>
 
