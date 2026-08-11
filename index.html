@@ -48,6 +48,7 @@
       gap: 6px;
     }
     .notes-btn {
+      position: relative;
       font-size: 20px;
       color: #d1d5db;
       padding: 2px;
@@ -63,7 +64,8 @@
     .custom-tooltip {
       position: absolute;
       top: 100%;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(-6px);
       margin-top: 8px;
       background: #2a2a2a;
       border: 1px solid #3f3f3f;
@@ -73,21 +75,22 @@
       box-shadow: 0 8px 24px rgba(0,0,0,0.4);
       opacity: 0;
       visibility: hidden;
-      transform: translateY(-6px);
       transition: all 0.2s ease;
       z-index: 50;
       pointer-events: none;
+      white-space: nowrap;
     }
-    .name-wrapper:hover .custom-tooltip {
+    .notes-btn:hover .custom-tooltip {
       opacity: 1;
       visibility: visible;
-      transform: translateY(0);
+      transform: translateX(-50%) translateY(0);
     }
     .custom-tooltip::before {
       content: '';
       position: absolute;
       top: -6px;
-      left: 18px;
+      left: 50%;
+      margin-left: -6px;
       width: 12px;
       height: 12px;
       background: #2a2a2a;
@@ -123,15 +126,17 @@
       <div>
         <div class="name-wrapper">
           <h1 class="text-4xl lg:text-5xl font-bold tracking-tight">Txxicu</h1>
-          <span class="material-icons notes-btn" title="">notes</span>
           
-          <!-- Custom tooltip -->
-          <div class="custom-tooltip">
-            <div class="nick-item">TxxicuExE</div>
-            <div class="nick-item">Тиксу</div>
-            <div class="nick-item">Тиксусич</div>
-            <div class="nick-item">Wasted</div>
-          </div>
+          <span class="material-icons notes-btn">
+            notes
+            <!-- Custom tooltip теперь внутри notes-btn -->
+            <div class="custom-tooltip">
+              <div class="nick-item">TxxicuExE</div>
+              <div class="nick-item">Тиксу</div>
+              <div class="nick-item">Тиксусич</div>
+              <div class="nick-item">Wasted</div>
+            </div>
+          </span>
         </div>
         
         <div class="text-gray-400 text-sm mt-1 space-y-0.5">
@@ -176,12 +181,10 @@
           <img class="tool-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" title="Android Studio" alt="Android Studio">
           <img class="tool-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" title="Godot" alt="Godot">
           
-          <!-- GDevelop SVG (по мотивам логотипа) -->
+          <!-- GDevelop SVG -->
           <svg class="tool-icon" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" title="GDevelop">
             <rect width="200" height="80" rx="12" fill="#4B2E7A"/>
-            <!-- Stylized G -->
             <path d="M38 18 C22 18 12 28 12 40 C12 52 22 62 38 62 C50 62 58 54 58 42 L58 38 L38 38 L38 46 L50 46 C50 50 45 54 38 54 C28 54 22 48 22 40 C22 32 28 26 38 26 C44 26 49 29 51 34 L58 30 C54 22 46 18 38 18 Z" fill="white"/>
-            <!-- DEVELOP text -->
             <text x="70" y="48" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="white" letter-spacing="1">DEVELOP</text>
           </svg>
         </div>
